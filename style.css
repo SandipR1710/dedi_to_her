@@ -77,7 +77,19 @@ body {
         box-shadow: 0 0 10px rgb(255, 0, 140);
     }
 }
+@keyframes glow1{
+    0% {
+        box-shadow: 0 0 5px rgb(255, 0, 140);
+    }
 
+    50% {
+        box-shadow: 0 0 10px rgb(255, 0, 140);
+    }
+
+    100% {
+        box-shadow: 0 0 5px rgb(255, 0, 140);
+    }
+}
 .ttext {
     font-family: 'DM Serif Display', serif;
 }
@@ -85,10 +97,12 @@ body {
 .imgslot {
     margin-top: 20px;
     border-radius: 5px;
-    width: 140px;
+    width: 139px;
     height: 150px;
     background-image: url("herp1.jpg");
     background-size:contain;
+    border: 1.5px solid rgb(255, 0, 140);
+    animation: glow1 2s infinite;;
 }
 .flip-button {
     background-color: transparent;

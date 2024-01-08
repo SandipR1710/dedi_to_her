@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    background-image: url("background.jpg");
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.card {
+    width: 250px;
+    height: 350px;
+    border-radius: 10px;
+    backdrop-filter: blur(50px);
+    /* border:2px solid black; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+    border: 2px solid rgb(255, 0, 140);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+    position: relative;
+    overflow: hidden;
+    animation: glow 2s infinite;
+
+}
+
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 10px rgb(255, 0, 140);
+    }
+
+    50% {
+        box-shadow: 0 0 20px rgb(255, 0, 140);
+    }
+
+    100% {
+        box-shadow: 0 0 10px rgb(255, 0, 140);
+    }
+}
+
+.ttext {
+    font-family: 'Acme', sans-serif;
+}
+
+.imgslot {
+    margin-top: 20px;
+    border-radius: 5px;
+    width: 150px;
+    height: 150px;
+    background-image: url("herp1.jpg");
+    background-size: cover;
+}

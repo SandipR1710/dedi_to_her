@@ -8,16 +8,48 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Acme&family=DM+Serif+Display&family=Oswald&family=Satisfy&display=swap"
+        rel="stylesheet">
+    <script>
+        function flipCard() {
+            const card = document.querySelector('.card');
+            const audio = document.getElementById('backgroundMusic');
+
+            card.classList.toggle('flipped');
+
+            if (card.classList.contains('flipped')) {
+                audio.play();
+            } else {
+                audio.pause();
+            }
+        }
+
+    </script>
 </head>
 
 <body>
     <div class="card">
-        <div class="imgslot">
-            <!-- <img src="herp1.jpg" alt=""> -->
+        <div class="front">
+            <h1 class="fheader">Hey❤️</h1>
+            <p class="ftext">I made this for you. Hope you will like it &nbsp;^_^ </p>
+            <button class="flip-button" onclick="flipCard()">Touch here</button>
+
         </div>
-        <h1 class="ttext">FREE</h1>
-        <p>Her free spirit shines, bringing joy and liberation to every moment.</p>
+        <div class="back">
+            <div class="imgslot">
+                <!-- <img src="herp1.jpg" alt=""> -->
+            </div>
+            <h2 class="ttext">Dear Priya</h2>
+            <p class="btext">You are amazing. Keep being amazing. I will always be by your side&nbsp;♡</p>
+            <button class="flip-button" onclick="flipCard()">go back</button>
+            <audio id="backgroundMusic" loop>
+                <source src="Raabta.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+
+
     </div>
 </body>
 

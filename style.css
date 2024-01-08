@@ -13,31 +13,57 @@ body {
     align-items: center;
 
 }
-
 .card {
-    width: 250px;
-    height: 350px;
+    width: 260px;
+    height: 360px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+.card.flipped {
+    transform: rotateY(180deg);
+}
+.card .front,
+.card .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.card .back {
+    /* Styles for the front of the card */
     border-radius: 10px;
     backdrop-filter: blur(50px);
-    /* border:2px solid black; */
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
     text-align: center;
     color: white;
-    padding: 20px;
+    padding: 15px;
     box-sizing: border-box;
     border: 2px solid rgb(255, 0, 140);
-    border-radius: 10px;
-    padding: 20px;
-    margin: 20px;
-    position: relative;
+    transform: rotateY(180deg);
     overflow: hidden;
     animation: glow 2s infinite;
-
 }
 
+.card .front {
+    border-radius: 10px;
+    backdrop-filter: blur(50px);
+    border: 2px solid rgb(255, 0, 140);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    animation: glow 2s infinite;
+    color:white;
+    box-sizing: border-box;
+    padding: 30px;
+}
 @keyframes glow {
     0% {
         box-shadow: 0 0 10px rgb(255, 0, 140);
@@ -53,14 +79,34 @@ body {
 }
 
 .ttext {
-    font-family: 'Acme', sans-serif;
+    font-family: 'DM Serif Display', serif;
 }
 
 .imgslot {
     margin-top: 20px;
     border-radius: 5px;
-    width: 150px;
+    width: 140px;
     height: 150px;
     background-image: url("herp1.jpg");
-    background-size: cover;
+    background-size:contain;
+}
+.flip-button {
+    background-color: transparent;
+    color: rgb(255, 0, 140);
+    border: 2px solid rgb(255, 0, 140);
+    padding: 8px 12px;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 5px;
+  }
+.ftext{
+    font-family: 'Satisfy', cursive;
+    font-size: 20px;
+}
+.btext{
+    font-family: 'Satisfy', cursive;
+    font-size: 15px;
+}
+.fheader{
+    font-family: 'DM Serif Display', serif;
 }
